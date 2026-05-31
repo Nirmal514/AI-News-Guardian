@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+requests
+newspaper3k
+python-multipart
+easyocr
+pillow
+google-generativeai
+transformers
+torch
+numpy

@@ -1,0 +1,418 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #020617;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================
+   APP CONTAINER
+========================= */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e293b
+  );
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 280px;
+  min-height: 100vh;
+
+  background: rgba(
+    17,
+    24,
+    39,
+    0.95
+  );
+
+  backdrop-filter: blur(20px);
+
+  padding: 25px;
+
+  border-right: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+
+  margin: auto auto 15px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4
+  );
+
+  box-shadow:
+    0 0 25px rgba(
+      124,
+      58,
+      237,
+      0.5
+    );
+}
+
+.logo {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   MENU BUTTONS
+========================= */
+
+.menu-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  background: #1e293b;
+
+  color: white;
+
+  font-size: 15px;
+
+  text-align: left;
+
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background: #7c3aed;
+  transform: translateX(8px);
+}
+
+.active {
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4
+  );
+
+  font-weight: bold;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  flex: 1;
+
+  margin-left: 300px;
+
+  padding: 40px;
+
+  color: white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+
+  color: #7c3aed;
+
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  color: #cbd5e1;
+  font-size: 18px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 220px;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.15
+  );
+
+  box-shadow:
+    0 10px 30px rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 20px 40px rgba(
+      124,
+      58,
+      237,
+      0.35
+    );
+}
+
+.card h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #cbd5e1;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea {
+  width: 100%;
+  max-width: 1000px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid #334155;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  color: white;
+
+  outline: none;
+
+  font-size: 16px;
+
+  margin-top: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7c3aed;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4
+  );
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 10px 25px rgba(
+      124,
+      58,
+      237,
+      0.4
+    );
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+
+.result-box {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.08
+  );
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(
+    255,
+    255,
+    255,
+    0.1
+  );
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  margin-top: 20px;
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader {
+  width: 50px;
+  height: 50px;
+
+  border: 5px solid rgba(
+    255,
+    255,
+    255,
+    0.2
+  );
+
+  border-top: 5px solid #7c3aed;
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  margin-top: 60px;
+
+  color: #94a3b8;
+
+  padding-bottom: 20px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 20px;
+}

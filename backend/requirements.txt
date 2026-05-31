@@ -9,3 +9,4 @@ google-generativeai
 transformers
 torch
 numpy
+lxml_html_clean
